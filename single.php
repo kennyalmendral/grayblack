@@ -14,7 +14,7 @@
 					<h2>About <?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?></h2>
 
 					<div class="clearfix">
-						<div class="author-img"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><img src="http://localhost/wordpress/wp-content/uploads/2017/09/signature-photo.jpg" alt="<?php the_author(); ?>" title="<?php the_author(); ?>"></a></div>
+						<div class="author-img"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="<?php the_author(); ?>" title="View all posts by <?php the_author(); ?>"></a></div>
 						<div class="author-info"><p><?php the_author_meta('description'); ?></p></div>
 					</div>
 				</div>

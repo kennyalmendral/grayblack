@@ -7,7 +7,7 @@
 			?>
 
 			<p>Copyright &copy; <?php echo $date; ?> <a href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved</p>
-			<p><a href="#">Grayblack Theme</a> by <a href="<?php echo get_home_url(); ?>">Kenny Almendral</a></p>
+			<p><a href="https://github.com/kennyalmendral/grayblack" target="_blank" rel="nofollow">Grayblack Theme</a> by <a href="<?php echo get_home_url(); ?>">Kenny Almendral</a></p>
 			<p>Powered by WordPress</p>
 		</div>
 	</footer>

@@ -164,6 +164,14 @@ if ( ! function_exists('grayblack_numeric_posts_nav')) {/*{{{*/
 	}
 }/*}}}*/
 
+if ( ! function_exists('custom_excerpt_more')) {/*{{{*/
+	function custom_excerpt_more($more) {
+		return '&hellip;';
+	}
+
+	add_filter('excerpt_more', 'custom_excerpt_more');
+}/*}}}*/
+
 if ( ! function_exists('custom_excerpt_length')) {/*{{{*/
 	function custom_excerpt_length($length) {
 		return 40;

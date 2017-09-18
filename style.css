@@ -107,7 +107,8 @@ label {
 	display: block;
 }
 
-#top-bar a:hover {
+#top-bar a:hover,
+#top-bar li.current-menu-item a {
 	color: #fff;
 }
 
@@ -161,6 +162,10 @@ label {
 	line-height: 95px;
 }
 
+#header li.current-menu-item a {
+	color: #aaa;
+}
+
 #header .cat-nav li {
 	float: left;
 	margin-right: 1em;
@@ -181,11 +186,11 @@ label {
 
 #main ul {
 	list-style-type: circle;
-	padding-left: 1em;
+	padding-left: 2em;
 }
 
 #main ol {
-	padding-left: 1em;
+	padding-left: 2em;
 }
 
 #main .main-content {
@@ -428,6 +433,16 @@ ul.EnlighterJS {
 	#header .cat-nav {
 		line-height: 1.4;
 	}	
+}
+
+@media (max-width: 600px) {
+	#top-bar .top-bar-left {
+		width: 70%;
+	}
+
+	#top-bar .top-bar-right {
+		width: 30%;
+	}
 }
 
 @media (max-width: 500px) {
