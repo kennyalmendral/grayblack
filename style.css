@@ -1,0 +1,489 @@
+/*
+ * Theme Name: Grayblack
+ * Theme URI: https://github.com/kennyalmendral/grayblack
+ * Author: Kenny Almendral
+ * Author URI: http://kennyalmendral.com
+ * Description: Minimal blog theme for WordPress.
+ * Version: 0.1
+ */
+
+html {
+	background: #333;
+	background-size: cover;
+    color: #333;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Noto Serif', serif;
+	font-weight: 700;
+}
+
+p:empty {
+	display: none !important;
+}
+
+a { 
+	font-weight: 700;
+	color: #333; 
+}
+
+a:hover { 
+	text-decoration: none; 
+	color: #aaa; 
+}
+
+input[type="submit"],
+.button {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	padding: 0.8em 1em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="submit"]:hover,
+.button:hover {
+	color: #fff;
+	background: #555; 
+}
+
+label { 
+	margin-bottom: 0.5em; 
+}
+
+.browserupgrade { 
+	font-size: 1em; 
+	background: #333; 
+	color: #fff; 
+	padding: 1em; 
+	margin: 0; 
+	text-align: center; 
+}
+
+.browserupgrade a {
+	color: #aaa;
+}
+
+.browserupgrade a:hover {
+	color: #fff;
+}
+
+::-moz-selection {
+    background: #333;
+	color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #333;
+	color: #fff;
+    text-shadow: none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#top-bar {
+	padding: 1em;
+}
+
+#top-bar a {
+	color: #aaa;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	display: block;
+}
+
+#top-bar a:hover {
+	color: #fff;
+}
+
+#top-bar .top-bar-left,
+#top-bar .top-bar-right {
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 50%;
+	list-style: none;
+}
+
+#top-bar ul li {
+	float: left;
+}
+
+#top-bar .top-bar-left li {
+	margin-right: 1em;
+}
+
+#top-bar .top-bar-right li {
+	float: right;
+	margin-left: 1em;
+}
+
+#header {
+	background: #fff;
+	padding: 0 1em;
+}
+
+#header > .container {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+#header .logo {
+	width: auto;
+	float: left;
+}
+
+#header .logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+#header .cat-nav {
+	margin: 0;
+	padding: 0;
+	float: right;
+	list-style: none;
+	line-height: 95px;
+}
+
+#header .cat-nav li {
+	float: left;
+	margin-right: 1em;
+}
+
+#header .cat-nav li:last-of-type {
+	margin-right: 0;
+}
+
+#main {
+	padding: 0 1em;
+	background: #fff;
+}
+
+#main > .container {
+	padding-bottom: 3em;
+}
+
+#main ul {
+	list-style-type: circle;
+	padding-left: 1em;
+}
+
+#main ol {
+	padding-left: 1em;
+}
+
+#main .main-content {
+	float: left;
+	width: 65%;
+}
+
+#main .main-content .posts li,
+#main .sidebar .widget {
+	margin-bottom: 3em;
+}
+
+#main .main-content .posts li:last-of-type,
+#main .sidebar .widget:last-of-type {
+	margin-bottom: 0;
+}
+
+.home #main .main-content ul,
+.archive #main .main-content ul,
+.search #main .main-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main .main-content .post-meta {
+	overflow: hidden;
+    font-size: 0.9em;
+    padding: 0.7em 0.8em;
+    border-left: 4px solid #333;
+    background: #fafafa;
+    width: auto;
+    display: inline-block;
+}
+
+#main .main-content .post-meta a {
+	font-weight: 400;
+}
+
+#main .main-content .post-meta i {
+	padding-right: 2px;
+}
+
+#main .main-content .post-meta > div {
+	float: left;
+	margin-right: 1.4em;
+}
+
+#main .main-content .post-meta > div:last-of-type {
+	margin-right: 0;
+}
+
+.single #main .main-content .post-meta {
+	display: block;
+}
+
+.single #main .related-posts,
+.single #main .comments-container,
+.single #main .author-container {
+	margin-top: 3em;
+}
+
+.single #main .related-posts h2,
+.single #main .comments-container h2,
+.single #main .author-container h2 {
+    padding: 0.3em 0.6em;
+    border-left: 4px solid #333;
+    background: #fafafa;
+}
+
+.single #main .related-posts ul {
+	padding-left: 2em;
+}
+
+.single #main .related-posts a {
+	font-weight: 400;
+}
+
+.single .author-container .author-img {
+	width: 100px;
+	float: left;
+	margin-right: 1em;
+}
+
+.single .author-container .author-img img {
+	border-radius: 50%;
+	width: 100%;
+	height: auto;
+}
+
+.single .author-container .author-img p {
+	margin: 0;
+}
+
+.single .commentlist a {
+	font-weight: 400;
+}
+
+#main .sidebar {
+	float: right;
+	width: 30%;
+}
+
+#main .sidebar a {
+	font-weight: 400;
+}
+
+#main .sidebar ul {
+	list-style-type: circle;
+	padding-left: 1em;
+}
+
+#main .paging {
+	margin-top: 3em !important;
+}
+
+#main .paging ul {
+	overflow: hidden;
+}
+
+#main .paging li {
+	float: left;
+	margin-right: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+#main .paging li:last-of-type {
+	margin-right: 0;
+}
+
+#main .paging a {
+	display: block;
+	padding: 0.3em 0.7em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border: 1px solid #333;
+}
+
+#main .paging a:hover {
+	background: #333;
+	color: #fff;
+}
+
+#main .paging li.active a {
+	border-color: #eee;
+	color: #eee;
+	cursor: default;
+}
+
+#main .paging li.active a:hover {
+	background: #fff;
+}
+
+#main .paging li.previous {
+	margin-right: 0.5em;
+	margin-bottom: 0;
+}
+
+#main .paging li.next {
+	margin-bottom: 0;
+	margin-right: 0;
+}
+
+ol.EnlighterJS,
+ul.EnlighterJS {
+	padding: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+#footer {
+	padding: 0 1em;
+}
+
+#footer > .container {
+	padding: 3em 0;
+}
+
+#footer p {
+	color: #aaa;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#footer p:last-of-type {
+	margin-bottom: 0;
+}
+
+#footer p a {
+	color: #aaa;
+}
+
+#footer p a:hover {
+	color: #fff;
+}
+
+@media (max-width: 800px) {
+	#main .main-content,
+	#main .sidebar {
+		float: none;
+		width: 100%;
+	}
+
+	#main .sidebar {
+		margin-top: 3em; 
+		padding-top: 1em;
+		border-top: 1px solid #eee;;
+	}
+
+	.single .author-container .author-img {
+		width: auto;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	.single .author-container .author-img img {
+		width: auto;
+	}
+}
+
+@media (max-width: 700px) {
+	#header > .container {
+		text-align: center;
+	}
+
+	#header .logo,
+	#header .cat-nav {
+		float: none;
+		display: inline-block;
+	}
+
+	#header .logo {
+		width: 100%;
+		margin-bottom: 2em;
+	}	
+
+	#header .cat-nav {
+		line-height: 1.4;
+	}	
+}
+
+@media (max-width: 500px) {
+	#top-bar > .container {
+		text-align: center;
+	}
+
+	#top-bar .top-bar-left,
+	#top-bar .top-bar-right {
+		width: 100%;
+		float: none;
+		display: inline-block;
+	}
+
+	#top-bar .top-bar-left {
+		border-bottom: 1px solid #444;
+		padding-bottom: 0.6em;
+	}
+
+	#top-bar .top-bar-right {
+		border-top: 1px solid #222;
+		padding-top: 0.6em;
+	}	
+
+	#top-bar .top-bar-left li,
+	#top-bar .top-bar-right li {
+		float: none;
+		display: inline-block;
+		margin: 0 1em 0 0;
+	}
+
+	#top-bar .top-bar-left li:last-of-type,
+	#top-bar .top-bar-right li:last-of-type {
+		margin-right: 0;
+	}
+
+	#header .cat-nav li {
+		float: none;
+		margin: 0 0 0.5em;
+	}
+
+	#header .cat-nav li:last-of-type {
+		margin-bottom: 0;
+	}	
+}
+
+@media (max-width: 380px) {
+	#top-bar .top-bar-left li, 
+	#top-bar .top-bar-right li {
+		float: none;
+		display: block;
+		margin: 0 0 0.5em 0;
+	}
+
+	#top-bar .top-bar-left li:last-of-type, 
+	#top-bar .top-bar-right li:last-of-type {
+		margin-bottom: 0;
+	}
+}
