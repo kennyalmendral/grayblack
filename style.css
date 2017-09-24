@@ -4,7 +4,7 @@
  * Author: Kenny Almendral
  * Author URI: http://kennyalmendral.com
  * Description: Minimal blog theme for WordPress.
- * Version: 0.1
+ * Version: 0.3
  */
 
 html {
@@ -289,6 +289,32 @@ label {
 	font-weight: 400;
 }
 
+.single .post-nav {
+	margin-top: 3em;
+}
+
+.single .post-nav a {
+	padding: 0.3em 0.7em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border: 1px solid #333;
+	display: block;
+	float: left;
+	width: auto;
+	margin-right: 0.5em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.single .post-nav a:last-of-type {
+	margin-right: 0;
+}
+
+.single .post-nav a:hover {
+	background: #333;
+	color: #fff;
+}
+
 #main .sidebar {
 	float: right;
 	width: 30%;
@@ -299,8 +325,8 @@ label {
 }
 
 #main .sidebar ul {
-	list-style-type: circle;
-	padding-left: 1em;
+	list-style-type: disc;
+	padding-left: 1.4em;
 }
 
 #main .paging {
