@@ -185,7 +185,7 @@ label {
 }
 
 #main ul {
-	list-style-type: circle;
+	list-style-type: disc;
 	padding-left: 2em;
 }
 
