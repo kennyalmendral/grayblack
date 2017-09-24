@@ -264,24 +264,4 @@ if ( ! function_exists('remove_css_js_version')) {/*{{{*/
 
 add_filter('the_generator', '__return_null');
 
-$the_query = new WP_Query(array(
-	'post_type' => 'product',
-	'post_status' => 'publish',
-	'orderby' => 'date',
-	'order' => 'DESC'
-));
-
-if ($the_query->have_posts()) {
-	echo '<ul>';
-
-	while ($the_query->have_posts()) {
-		$the_query->the_post();
-
-		echo '<li>' . get_the_title() . '</li>';
-	}
-	echo '</ul>';
-
-	wp_reset_postdata();
-}
-
 ?>
