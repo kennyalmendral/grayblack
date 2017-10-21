@@ -91,11 +91,11 @@ if ( ! function_exists('grayblack_paging_nav')) {/*{{{*/
 	function grayblack_paging_nav() { ?>
 		<ul class="paging clearfix">
 			<?php if (get_previous_posts_link()) : ?>
-				<li class="previous"><?php previous_posts_link('&larr; Previous'); ?></li>
+				<li class="previous"><?php previous_posts_link('Next &rarr;'); ?></li>
 			<?php endif; ?>
 
 			<?php if (get_next_posts_link()) : ?>
-				<li class="next"><?php next_posts_link('Next &rarr;'); ?></li>
+				<li class="next"><?php next_posts_link('&larr; Previous'); ?></li>
 			<?php endif; ?>
 		</ul><?php
 	}
@@ -231,37 +231,13 @@ if ( ! function_exists('add_related_posts_to_content')) {/*{{{*/
 	add_filter('the_content', 'add_related_posts_to_content');
 }/*}}}*/
 
-if ( ! function_exists('remove_width_and_height_attribute')) {/*{{{*/
-	add_filter('get_image_tag', 'remove_width_and_height_attribute', 10);
-	add_filter('post_thumbnail_html', 'remove_width_and_height_attribute', 10);
-	add_filter('image_send_to_editor', 'remove_width_and_height_attribute', 10);
-
-	function remove_width_and_height_attribute($html) {
-	   return preg_replace('/(height|width)="\d*"\s/', "", $html);
-	}
-}/*}}}*/
-
 if ( ! function_exists('remove_empty_p')) {/*{{{*/
-	add_filter('the_content', 'remove_empty_p', 20, 1);
-
 	function remove_empty_p($content) {
 		$content = force_balance_tags($content);
-
 		return preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
 	}
-}/*}}}*/
-
-if ( ! function_exists('remove_css_js_version')) {/*{{{*/
-	add_filter('style_loader_src', 'remove_css_js_version', 1000);
-	add_filter('script_loader_src', 'remove_css_js_version', 1000);
-
-	function remove_css_js_version($src) {
-		if (strpos($src, '?ver=')) {
-			$src = remove_query_arg('ver', $src);
-		}
-			
-		return $src;
-	}
+	
+	add_filter('the_content', 'remove_empty_p', 20, 1);
 }/*}}}*/
 
 add_filter('the_generator', '__return_null');
