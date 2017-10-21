@@ -7,6 +7,8 @@ define('IMAGES', ROOT . 'images/');
 if ( ! function_exists('grayblack_setup')) {/*{{{*/
 	function grayblack_setup() {
 		add_theme_support('automatic-feed-links');
+		add_theme_support('post-thumbnails');
+		add_theme_support('title-tag');
 
 		register_nav_menus(array(
 			'top-bar-left' => 'Top Bar Left',
